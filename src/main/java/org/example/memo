@@ -1,0 +1,12 @@
+ // 非同期にリクエストを実行し、レスポンスを処理します
+        responseMono.subscribe(
+                response -> System.out.println("Response: " + response),
+                error -> System.err.println("Error: " + error.getMessage())
+        );
+
+        // プログラムを終了させないために、少し待機します
+        try {
+            Thread.sleep(2000);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
