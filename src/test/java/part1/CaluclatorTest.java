@@ -13,4 +13,12 @@ public class CaluclatorTest {
         assertThat(actual, is(expected));
     }
 
+    @Test
+    public void divideで除算結果が取得できる() {
+        Caluculator caluculator = new Caluculator();
+        float expected = 1.5f;
+        float actual = caluculator.divide(3, 2);
+        assertThat(actual, is(expected));
+    }
+
 }
